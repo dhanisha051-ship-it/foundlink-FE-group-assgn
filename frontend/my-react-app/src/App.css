@@ -1,0 +1,155 @@
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  border: 1px solid #dce6f7;
+  border-radius: 16px;
+  background: #fff;
+  transition: 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: #0759d8;
+  box-shadow: 0 8px 20px #0759d81a;
+}
+
+.stat-card.active {
+  border: 2px solid #0759d8;
+  background: #edf4ff;
+}
+
+.stat-icon {
+  font-size: 27px;
+}
+
+.stat-card h2 {
+  margin: 0 0 6px;
+}
+
+/* Reports layout with sidebar */
+.reports-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 28px;
+  align-items: start;
+}
+
+.reports-main {
+  min-width: 0;
+}
+
+.how-sidebar {
+  display: grid;
+  gap: 16px;
+  padding-top: 10px;
+}
+
+.how-card,
+.return-card {
+  padding: 22px;
+  border: 1px solid #dce6f7;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f5f8ff, #e8f0ff);
+}
+
+.how-card h2 {
+  margin: 0 0 25px;
+  font-size: 21px;
+  color: #10377f;
+}
+
+.how-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.how-step:last-child {
+  margin-bottom: 0;
+}
+
+.how-step > span {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #0759d8;
+  font-weight: 700;
+}
+
+.how-step h3 {
+  margin: 2px 0 6px;
+  font-size: 13px;
+  color: #123578;
+}
+
+.how-step p {
+  margin: 0;
+  color: #64728d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.return-card {
+  text-align: center;
+}
+
+.return-card > div {
+  font-size: 35px;
+}
+
+.return-card h3 {
+  margin: 12px 0;
+  color: #0759d8;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.return-card p {
+  margin-bottom: 0;
+  color: #64728d;
+  font-size: 12px;
+}
+
+.results-count {
+  margin: 0 0 15px;
+  color: #64728d;
+  font-size: 12px;
+}
+
+.detail-icon {
+  min-height: 90px;
+}
+
+/* Responsive sidebar */
+@media (max-width: 1000px) {
+  .reports-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .how-sidebar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .how-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    gap: 10px;
+  }
+
+  .stat-icon {
+    font-size: 22px;
+  }
+}
